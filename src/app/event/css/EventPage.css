@@ -1,0 +1,28 @@
+.stat-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #2f2f2f;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2열 구성 */
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.event-card {
+    background-color: #3f3f3f;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,98 @@
+.event-form {
+    width: 100%; /* 너비 제한 없이 꽉 차게 */
+    max-width: 700px; /* 너무 넓지 않도록 제한 (원하는 값) */
+    margin: 0 auto; /* 수평 가운데 정렬 */
+    background-color: #2f2f2f;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.event-form h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.event-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.event-input,
+.event-select,
+.event-datepicker {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #4a4a4a;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.event-input::placeholder {
+    color: #ccc;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.button-row {
+    display: flex;
+    gap: 12px;           /* 버튼 사이 간격 */
+    margin-top: 20px;    /* 위쪽 여백 */
+}
+
+.event-button {
+    flex: 1;
+    padding: 10px;
+    background-color: #5c5c5c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.event-button:hover {
+    background-color: #707070;
+}
+
+.event-button.cancel {
+    background-color: #3a3a3a;
+}
+
+.event-button.cancel:hover {
+    background-color: #555;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* 어두운 배경 */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;     /* ✅ 여백 제거 */
+    padding: 0;    /* ✅ 여백 제거 */
+    overflow: hidden; /* ✅ 스크롤 시 뒤에 바깥 여백 방지 */
+}
+
+.modal-content {
+    background-color: #222;
+    border-radius: 12px;
+    width: 700px;                /* 기존보다 넓게 */
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
+}

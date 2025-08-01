@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect , useState } from "react";
 import "../css/EventPage.css"
+import {Props} from "next/script";
 
 type Event = {
     id: number;
@@ -20,7 +21,6 @@ const mockEvents: Event[] = Array.from({ length: 53 }, (_, index) => ({
 
 
 const EventDataPage = () => {
-
     const [events, setEvents] = useState<Event[]>([]);
     const [page, setPage] = useState(0);
     const size = 10;
@@ -38,14 +38,15 @@ const EventDataPage = () => {
             <h2>이벤트 페이지</h2>
             <div className="event-grid">
                 {events.map((event) => (
-                    <div key={event.id} className="event-card">
+                    <div key={event.id} className="event-card" onClick={() => {
+                        if (typeof window !== 'undefined') {
+                            window.location.href = `/event/${event.id}`;
+                        }
+                    }}>
                         <p>이벤트 이름 : {event.name}</p>
                         <p>이벤트 타입 : {event.type}</p>
                         <p>이벤트 시작 시간 : {event.startTime}</p>
                         <p>이벤트 종료 시간 : {event.endTime}</p>
-                        <button onClick={() => alert(`상세 보기: ${event.id}`)}>
-                            이벤트 상세 정보 확인하기
-                        </button>
                     </div>
                 ))}
             </div>

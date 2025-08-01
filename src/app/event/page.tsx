@@ -5,12 +5,13 @@ import SubMenuPage from "@/app/topMenu/pages/subMenuPage";
 export default async function Page() {
 
     return (
-        <div>
-            <main>
-                <TopMenuPage></TopMenuPage>
-                <SubMenuPage></SubMenuPage>
-                <EventDataPage></EventDataPage>
-            </main>
-        </div>
+
+            <div>
+                <main>
+                    <TopMenuPage></TopMenuPage>
+                    <SubMenuPage></SubMenuPage>
+                    <EventDataPage></EventDataPage>
+                </main>
+            </div>
     );
 }

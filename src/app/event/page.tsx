@@ -1,6 +1,6 @@
 import TopMenuPage from "@/app/topMenu/pages/topMenuPage";
 import EventDataPage from "@/app/event/pages/EventDataPage";
-import SubMenuPage from "@/app/topMenu/pages/subMenuPage";
+import SubMenuPage from "@/app/event/pages/subMenuPage";
 
 export default async function Page() {
 

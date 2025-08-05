@@ -1,11 +1,12 @@
 'use client'
 import Link from 'next/link';
-import '../css/SubMenu.css';
+import '../../../topMenu/css/SubMenu.css';
 import React from "react";
 import CreateEventDataPage from "@/app/event/create/pages/CreateEventDataPage";
-import "../../event/create/css/CreateEventPage.css"
+import "../../create/css/CreateEventPage.css"
+import CreateRewardDataPage from "@/app/event/[id]/pages/CreateRewardDataPage";
 
-const SubMenuPage = () => {
+const DetailSubMenuPage = () => {
 
     const [showPopup, setShowPopup] = React.useState(false);
 
@@ -14,13 +15,13 @@ const SubMenuPage = () => {
             <nav className="navbar">
                 <div className="navbar-sub">
                     <li>
-                        <Link href="/event" className="sub-link">이벤트 목록</Link>
+                        <Link href="/event" className="sub-link">이벤트 목록으로 돌아가기</Link>
                     </li>
                     <li>
                         <button
                             className="sub-link"
                             onClick={() => setShowPopup(true)}>
-                            이벤트 등록 하기
+                            보상 추가 하기
                         </button>
                     </li>
                 </div>
@@ -30,7 +31,7 @@ const SubMenuPage = () => {
             {showPopup && (
                 <div className="modal-backdrop">
                     <div className="modal-content">
-                        <CreateEventDataPage onClose={() => setShowPopup(false)} />
+                        <CreateRewardDataPage onClose={() => setShowPopup(false)} />
                     </div>
                 </div>
             )}
@@ -38,4 +39,4 @@ const SubMenuPage = () => {
     );
 };
 
-export default SubMenuPage;
+export default DetailSubMenuPage;

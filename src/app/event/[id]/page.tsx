@@ -1,6 +1,7 @@
 import TopMenuPage from "@/app/topMenu/pages/topMenuPage";
-import SubMenuPage from "@/app/topMenu/pages/subMenuPage";
+import SubMenuPage from "@/app/event/pages/subMenuPage";
 import DetailEventDataPage from "@/app/event/[id]/pages/DetailEventDataPage";
+import DetailSubMenuPage from "@/app/event/[id]/pages/detailSubMenuPage";
 
 export default async function Page({ params }: { params: { id: string } }) {
 
@@ -9,8 +10,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         <div>
             <main>
                 <TopMenuPage></TopMenuPage>
-                <SubMenuPage></SubMenuPage>
-                <div>이벤트 ID: {params.id}</div>
+                <DetailSubMenuPage></DetailSubMenuPage>
                 <DetailEventDataPage id={params.id}/>
             </main>
         </div>
